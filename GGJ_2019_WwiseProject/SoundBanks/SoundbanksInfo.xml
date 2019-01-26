@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
+	<RootPaths>
+		<ProjectRoot>D:\project\GGJ_2019\Home Balance\</ProjectRoot>
+		<SourceFilesRoot>D:\project\GGJ_2019\Home Balance\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\project\GGJ_2019\GGJ_2019_WwiseProject\SoundBanks\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\project\GGJ_2019\GGJ_2019_WwiseProject\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="660833348" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Home_SB</ObjectPath>
+			<ShortName>Home_SB</ShortName>
+			<Path>Home_SB.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3854155799" Name="Play_Footsteps" ObjectPath="\Events\Default Work Unit\Play_Footsteps"/>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music"/>
+				<Event Id="3157907375" Name="Play_Sea" ObjectPath="\Events\Default Work Unit\Play_Sea"/>
+				<Event Id="1633191099" Name="Squeak" ObjectPath="\Events\Default Work Unit\Squeak"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="247274769" Language="SFX">
+					<ShortName>Sea_Fone.wav</ShortName>
+					<Path>SFX\Sea_Fone_4343AB7F.wem</Path>
+				</File>
+				<File Id="257479341" Language="SFX">
+					<ShortName>Squeak_2_2.wav</ShortName>
+					<Path>SFX\Squeak_2_2_030CF4A9.wem</Path>
+				</File>
+				<File Id="324137986" Language="SFX">
+					<ShortName>Squeak_2_1.wav</ShortName>
+					<Path>SFX\Squeak_2_1_030CF4A9.wem</Path>
+				</File>
+				<File Id="324619365" Language="SFX">
+					<ShortName>Minskoe more (Z).wav</ShortName>
+					<Path>SFX\Minskoe more (Z)_2F72939B.wem</Path>
+				</File>
+				<File Id="324684549" Language="SFX">
+					<ShortName>Alastor.wav</ShortName>
+					<Path>SFX\Alastor_138B9027.wem</Path>
+				</File>
+				<File Id="338034406" Language="SFX">
+					<ShortName>Squeak_1_1.wav</ShortName>
+					<Path>SFX\Squeak_1_1_030CF4A9.wem</Path>
+				</File>
+				<File Id="357720858" Language="SFX">
+					<ShortName>run l 4  - 4.wav</ShortName>
+					<Path>SFX\run l 4  - 4_030CF4A9.wem</Path>
+				</File>
+				<File Id="375248035" Language="SFX">
+					<ShortName>Harbour_Sea_6051- 78.wav</ShortName>
+					<Path>SFX\Harbour_Sea_6051- 78_D4A16BBA.wem</Path>
+				</File>
+				<File Id="392913010" Language="SFX">
+					<ShortName>Squeak_5.wav</ShortName>
+					<Path>SFX\Squeak_5_030CF4A9.wem</Path>
+				</File>
+				<File Id="394131225" Language="SFX">
+					<ShortName>Squeak_1_3.wav</ShortName>
+					<Path>SFX\Squeak_1_3_030CF4A9.wem</Path>
+				</File>
+				<File Id="441305072" Language="SFX">
+					<ShortName>run l 4  - 1.wav</ShortName>
+					<Path>SFX\run l 4  - 1_030CF4A9.wem</Path>
+				</File>
+				<File Id="473682656" Language="SFX">
+					<ShortName>Squeak_1_2.wav</ShortName>
+					<Path>SFX\Squeak_1_2_030CF4A9.wem</Path>
+				</File>
+				<File Id="503298240" Language="SFX">
+					<ShortName>Squeak_4.wav</ShortName>
+					<Path>SFX\Squeak_4_030CF4A9.wem</Path>
+				</File>
+				<File Id="513585801" Language="SFX">
+					<ShortName>run r 4  - 1.wav</ShortName>
+					<Path>SFX\run r 4  - 1_030CF4A9.wem</Path>
+				</File>
+				<File Id="529128290" Language="SFX">
+					<ShortName>run l 4  - 5.wav</ShortName>
+					<Path>SFX\run l 4  - 5_030CF4A9.wem</Path>
+				</File>
+				<File Id="549085312" Language="SFX">
+					<ShortName>AnmlTrx10-22.wav</ShortName>
+					<Path>SFX\AnmlTrx10-22_2CCA1776.wem</Path>
+				</File>
+				<File Id="550434260" Language="SFX">
+					<ShortName>run r 4  - 5.wav</ShortName>
+					<Path>SFX\run r 4  - 5_030CF4A9.wem</Path>
+				</File>
+				<File Id="603187341" Language="SFX">
+					<ShortName>Squeak_6.wav</ShortName>
+					<Path>SFX\Squeak_6_030CF4A9.wem</Path>
+				</File>
+				<File Id="607815609" Language="SFX">
+					<ShortName>More s chaykami (SI1).wav</ShortName>
+					<Path>SFX\More s chaykami (SI1)_8F3B55A1.wem</Path>
+				</File>
+				<File Id="636382701" Language="SFX">
+					<ShortName>run l 4  - 3.wav</ShortName>
+					<Path>SFX\run l 4  - 3_030CF4A9.wem</Path>
+				</File>
+				<File Id="722157128" Language="SFX">
+					<ShortName>run l 4  - 2.wav</ShortName>
+					<Path>SFX\run l 4  - 2_030CF4A9.wem</Path>
+				</File>
+				<File Id="744980840" Language="SFX">
+					<ShortName>run r 4  - 3.wav</ShortName>
+					<Path>SFX\run r 4  - 3_030CF4A9.wem</Path>
+				</File>
+				<File Id="905017010" Language="SFX">
+					<ShortName>Squeak_3.wav</ShortName>
+					<Path>SFX\Squeak_3_030CF4A9.wem</Path>
+				</File>
+				<File Id="957016291" Language="SFX">
+					<ShortName>U mosta s pleskom vody, ludi (Kam2).wav</ShortName>
+					<Path>SFX\U mosta s pleskom vody, ludi (Kam2)_8DC6FCE3.wem</Path>
+				</File>
+				<File Id="966133481" Language="SFX">
+					<ShortName>Squeak_2_3.wav</ShortName>
+					<Path>SFX\Squeak_2_3_030CF4A9.wem</Path>
+				</File>
+				<File Id="1028178418" Language="SFX">
+					<ShortName>run r 4  - 2.wav</ShortName>
+					<Path>SFX\run r 4  - 2_030CF4A9.wem</Path>
+				</File>
+				<File Id="1035693678" Language="SFX">
+					<ShortName>run r 4  - 4.wav</ShortName>
+					<Path>SFX\run r 4  - 4_030CF4A9.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
