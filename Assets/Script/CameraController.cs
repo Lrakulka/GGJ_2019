@@ -32,8 +32,14 @@ public class CameraController : MonoBehaviour
             {
                 Vector3 camTarget = LevelManager.instance.levels[LevelManager.instance.levelCount-1].transform.position;
                 camTarget.z = -10;
-
-                camera.transform.position = Vector3.Lerp(camera.transform.position, camTarget, lerpRate);
+                if (Vector3.Distance(camTarget, this.transform.position) > 15)
+                {
+                    camera.transform.position = camTarget;
+                }
+                else
+                {
+                    camera.transform.position = Vector3.Lerp(camera.transform.position, camTarget, lerpRate);
+                }
             }
 
         //    yield return new WaitForSeconds(refRate);
