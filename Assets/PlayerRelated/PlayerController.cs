@@ -6,10 +6,15 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rigidbody;
 
+    private Vector3 startPosition;
+
     public float speed = 10;
+
+    private int currentLevel = 0;
 
     private void Awake()
     {
+        startPosition = this.transform.position;
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
@@ -59,11 +64,10 @@ public class PlayerController : MonoBehaviour
             {
                 if (hit.transform.name == "Door")
                 {
-                    Debug.Log("Entering door!");
+                    EnterDoor();
                     return;
                 }
-
-                //Debug.Log("Picking: " + hit.transform.name);
+                
                 carry = hit.transform.gameObject;
                 hit.transform.SetParent(this.transform);
                 hit.transform.position = hit.transform.position + Vector3.up;
@@ -83,6 +87,16 @@ public class PlayerController : MonoBehaviour
 
         carry.transform.SetParent(null);
         carry = null;
+    }
+
+    private void EnterDoor()
+    {
+        if (LevelManager.instance.levels.Count == currentLevel + 1)
+            return;
+
+        Debug.Log("Entering door!");
+        currentLevel++;
+        this.transform.position = LevelManager.instance.levels[currentLevel].transform.position;
     }
 
 }
