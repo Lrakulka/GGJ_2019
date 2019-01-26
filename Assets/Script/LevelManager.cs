@@ -14,6 +14,8 @@ public class LevelManager : MonoBehaviour
     public GameObject leftStopper;
     public GameObject rightStopper;
 
+    public GameObject resetButton;
+
     public float generateLevelTime;
     public float levelHight;
 
@@ -61,6 +63,7 @@ public class LevelManager : MonoBehaviour
         // Destroy levels
         //if (!isAlive) return;
         isAlive = false;
+        resetButton.SetActive(false);
 
         levelCount = 0;
         Destroy(levels[0].gameObject);
@@ -85,6 +88,7 @@ public class LevelManager : MonoBehaviour
         swing.transform.rotation = Quaternion.identity;
 
         isAlive = true;
+        PlayerController.instance.Reset();
 
         StartGame();
     }
