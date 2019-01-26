@@ -4,23 +4,43 @@ using UnityEngine;
 
 public class GenerateLevel : MonoBehaviour
 {
+    public static GenerateLevel instance;
+
     public GameObject level;
     public GameObject balanceLevel;
     public GameObject swing;
     public float generateLevelTime;
     public float levelHight;
 
-    private int levelCount = 0;
-    private List<GameObject> levels;
+    [HideInInspector] public int levelCount = 0;
+    [HideInInspector] public List<GameObject> levels;
+    private List<GameObject> balancerLevels;
+
+    private void Awake()
+    {
+        instance = this;
+        levels = new List<GameObject>();
+        balancerLevels = new List<GameObject>();
+    }
+
+    void Start()
+    {
+        StartCoroutine(Generate());
+    }
 
     IEnumerator Generate()
     {
         while (true)
         {
-            GameObject newLevel = createLevel(level, levelHight, levelCount, "Level" + levelCount, 
-                levels.Count == 0 ? null: levels[levels.Count - 1]);
-            //GameObject newBalanceLevel = createLevel(balanceLevel, -levelHight, levelCount, "LevelBalance" + levelCount);
+            GameObject newLevel = createLevel(level, levelHight, levelCount, "Level" + levelCount,
+                levels.Count == 0 ? null : levels[levels.Count - 1]);
+            GameObject newBalanceLevel = newLevel;
+            if (balancerLevels.Count != 0)
+            {
+                newBalanceLevel = createLevel(balanceLevel, -levelHight, levelCount, "LevelBalance" + levelCount, balancerLevels[balancerLevels.Count - 1]);
+            }
             levels.Add(newLevel);
+            balancerLevels.Add(newBalanceLevel);
             levelCount++;
             yield return new WaitForSeconds(generateLevelTime);
         }
@@ -42,18 +62,5 @@ public class GenerateLevel : MonoBehaviour
                  prevLevel.transform.localPosition.z);
         }
         return newLevel;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        levels = new List<GameObject>();
-        StartCoroutine(Generate());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
