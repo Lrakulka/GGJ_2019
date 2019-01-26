@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class GenerateLevel : MonoBehaviour
 {
+    public static GenerateLevel instance;
+
     public GameObject level;
     public GameObject balanceLevel;
     public GameObject swing;
     public float generateLevelTime;
     public float levelHight;
 
-    private int levelCount = 0;
-    private List<GameObject> levels;
+    [HideInInspector] public int levelCount = 0;
+    [HideInInspector] public List<GameObject> levels;
     private List<GameObject> balancerLevels;
+
+    private void Awake()
+    {
+        instance = this;
+        levels = new List<GameObject>();
+        balancerLevels = new List<GameObject>();
+    }
+
+    void Start()
+    {
+        StartCoroutine(Generate());
+    }
 
     IEnumerator Generate()
     {
@@ -48,19 +62,5 @@ public class GenerateLevel : MonoBehaviour
                  prevLevel.transform.localPosition.z);
         }
         return newLevel;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        levels = new List<GameObject>();
-        balancerLevels = new List<GameObject>();
-        StartCoroutine(Generate());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
