@@ -21,8 +21,68 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Action!");
+            if (carry == null)
+                Pickup();
+            else
+                Drop(h);
         }
+    }
+
+    private GameObject carry = null;
+
+    private void Pickup()
+    {
+        Vector3 startPos = this.transform.position + Vector3.forward;
+
+        //Debug.DrawRay(startPos, Vector3.forward * 100, Color.red, 100);
+        //Debug.DrawRay(startPos + Vector3.down, Vector3.forward * 100, Color.red, 100);
+        //Debug.DrawRay(startPos + Vector3.down * 1.5f, Vector3.forward * 100, Color.red, 100);
+        //Debug.DrawRay(startPos + Vector3.up, Vector3.forward * 100, Color.red, 100);
+        //Debug.DrawRay(startPos + Vector3.up * 2, Vector3.forward * 100, Color.red, 100);
+        //Debug.DrawRay(startPos + Vector3.up * 3, Vector3.forward * 100, Color.red, 100);
+
+        RaycastHit2D[] hits = Physics2D.RaycastAll(startPos, Vector3.forward, 100);
+        if (hits.Length <= 1)
+            hits = Physics2D.RaycastAll(startPos + Vector3.down, Vector3.forward, 100);
+        if (hits.Length <= 1)
+            hits = Physics2D.RaycastAll(startPos + Vector3.up, Vector3.forward, 100);
+        if (hits.Length <= 1)
+            hits = Physics2D.RaycastAll(startPos + Vector3.up * 2, Vector3.forward, 100);
+        if (hits.Length <= 1)
+            hits = Physics2D.RaycastAll(startPos + Vector3.up * 3, Vector3.forward, 100);
+        if (hits.Length <= 1)
+            hits = Physics2D.RaycastAll(startPos + Vector3.down  * 1.5f, Vector3.forward, 100);
+
+        if (hits.Length > 0)
+            foreach (var hit in hits)
+            if (hit.transform.gameObject != this.gameObject)
+            {
+                if (hit.transform.name == "Door")
+                {
+                    Debug.Log("Entering door!");
+                    return;
+                }
+
+                //Debug.Log("Picking: " + hit.transform.name);
+                carry = hit.transform.gameObject;
+                hit.transform.SetParent(this.transform);
+                hit.transform.position = hit.transform.position + Vector3.up;
+                hit.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+            }
+    }
+
+    private void Drop(float speed)
+    {
+        //TODO: drop object
+        Debug.Log("Dropping.");
+
+        Rigidbody2D rigidbodyReference = carry.transform.GetComponent<Rigidbody2D>();
+
+        rigidbodyReference.bodyType = RigidbodyType2D.Dynamic;
+        rigidbodyReference.velocity = new Vector2(speed * 500 / rigidbodyReference.mass, 0);
+
+        carry.transform.SetParent(null);
+        carry = null;
     }
 
 }
