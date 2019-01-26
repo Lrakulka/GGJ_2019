@@ -28,9 +28,9 @@ public class CameraController : MonoBehaviour
     {
         //while (true)
         //{
-            if (GenerateLevel.instance.levels.Count > 0)
+            if (LevelManager.instance.levelCount > 0)
             {
-                Vector3 camTarget = GenerateLevel.instance.levels[GenerateLevel.instance.levelCount-1].transform.position;
+                Vector3 camTarget = LevelManager.instance.levels[LevelManager.instance.levelCount-1].transform.position;
                 camTarget.z = -10;
 
                 camera.transform.position = Vector3.Lerp(camera.transform.position, camTarget, lerpRate);
