@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class SupportManager : MonoBehaviour
 {
-    public static SupportManager instance;
-    public GameObject resetGameButton;
-    public UnityEngine.UI.Text levelText;
     public UnityEngine.UI.Text healthLabel;
 
     public int health;
@@ -15,7 +12,6 @@ public class SupportManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
     }
 
     // Start is called before the first frame update
@@ -47,11 +43,8 @@ public class SupportManager : MonoBehaviour
         healthLabel.text = currHealth.ToString();
         if (currHealth == 0)
         {
-            LevelManager.instance.StopGame();
-            levelText.text = LevelManager.instance.levelCount.ToString();
-            levelText.gameObject.SetActive(true);
-            resetGameButton.SetActive(true);
             this.gameObject.SetActive(false);
+            UIManager.instance.ExecuteGameEnd();
         }
     }
 }
