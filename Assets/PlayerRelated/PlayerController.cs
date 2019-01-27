@@ -126,7 +126,18 @@ public class PlayerController : MonoBehaviour
 
         Debug.Log("Entering door!");
         currentLevel++;
-        this.transform.position = LevelManager.instance.levels[currentLevel].transform.position;
+
+        Transform a = LevelManager.instance.levels[currentLevel].transform.Find("Shuffleable");
+
+       // Debug.Log(a.name);
+
+        a = a.Find("Door in");
+
+        // Debug.Log(a.name);
+
+        Vector3 newPos = a.transform.position + Vector3.up * 2;
+
+        this.transform.position = newPos;
     }
 
 }
