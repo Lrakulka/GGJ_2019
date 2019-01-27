@@ -91,6 +91,9 @@ public class LevelManager : MonoBehaviour
         isAlive = true;
         PlayerController.instance.Reset();
         GenerateLevel();
+        AkSoundEngine.PostEvent("Play_Music", gameObject);
+        AkSoundEngine.PostEvent("Play_Sea", this.gameObject);
+        AkSoundEngine.PostEvent("Squeak", gameObject);
         StartGame();
     }
 

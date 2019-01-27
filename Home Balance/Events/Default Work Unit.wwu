@@ -106,6 +106,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Drop" ID="{FD400200-AE18-4407-8992-C957A0340FAD}">
+					<ChildrenList>
+						<Action Name="" ID="{6C48297F-863C-44FC-B0CF-48AD17092E1D}" ShortID="262196171">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Drop" ID="{01964DB5-AAC0-4E7B-B38C-D354C1755757}" WorkUnitID="{6851867B-84D8-44E4-B2AC-5AFEB4352F24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

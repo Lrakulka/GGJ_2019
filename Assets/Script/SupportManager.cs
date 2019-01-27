@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -47,6 +47,8 @@ public class SupportManager : MonoBehaviour
         healthLabel.text = currHealth.ToString();
         if (currHealth == 0)
         {
+            AkSoundEngine.StopAll();// StopPlayingID("Play_Music");
+            AkSoundEngine.PostEvent("Play_END", this.gameObject);
             LevelManager.instance.StopGame();
             levelText.text = LevelManager.instance.levelCount.ToString();
             levelText.gameObject.SetActive(true);
