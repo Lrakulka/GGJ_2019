@@ -64,14 +64,13 @@ public class LevelManager : MonoBehaviour
 
         levelCount = 0;
         Destroy(levels[0].gameObject);
-        Destroy(balancerLevels[0].gameObject);
         
         foreach(var l in levels)
         {
             if (l != null)
                 Destroy(l.gameObject);
         }
-        foreach (var l in balancerLevels)
+        foreach (var l in levels)
         {
             if (l != null)
                 Destroy(l.gameObject);
@@ -102,23 +101,19 @@ public class LevelManager : MonoBehaviour
 
     private void GenerateLevel()
     {
-        GameObject newLevel = CreateLevel(level, levelHight, levelCount, "Level" + levelCount,
+        GameObject newLevel = createLevel(level, levelHight, levelCount, "Level" + levelCount,
                 levels.Count == 0 ? null : levels[levels.Count - 1]);
-        levels.Add(newLevel);
         GameObject newBalanceLevel = newLevel;
         if (balancerLevels.Count != 0)
         {
-            newBalanceLevel = CreateLevel(balanceLevel, -levelHight, levelCount, "LevelBalance" + levelCount, balancerLevels[balancerLevels.Count - 1]);
-        } else
-        {
-            newBalanceLevel = CreateLevel(balanceLevel, -levelHight, levelCount, "LevelBalance" + levelCount, levels[levels.Count - 1]);
+            newBalanceLevel = createLevel(balanceLevel, -levelHight, levelCount, "LevelBalance" + levelCount, balancerLevels[balancerLevels.Count - 1]);
         }
+        levels.Add(newLevel);
         balancerLevels.Add(newBalanceLevel);
-
         levelCount++;
     }
 
-    private GameObject CreateLevel(GameObject level, float levelHight, int levelCount, string name, GameObject prevLevel)
+    private GameObject createLevel(GameObject level, float levelHight, int levelCount, string name, GameObject prevLevel)
     {
         GameObject newLevel = GameObject.Instantiate(level);
         newLevel.transform.SetParent(swing.transform);
@@ -135,4 +130,6 @@ public class LevelManager : MonoBehaviour
         }
         return newLevel;
     }
+
+
 }
