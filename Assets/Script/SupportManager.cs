@@ -8,7 +8,7 @@ public class SupportManager : MonoBehaviour
 
     public int health;
     private float prevTime;
-    private int currHealth;
+    [HideInInspector] public int currHealth;
 
     private void Awake()
     {

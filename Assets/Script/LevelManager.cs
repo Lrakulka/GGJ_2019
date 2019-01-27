@@ -90,6 +90,17 @@ public class LevelManager : MonoBehaviour
         StartGame();
     }
 
+    public void addHPToSupport(int hp)
+    {
+        if (leftStopper.currHealth < rightStopper.currHealth)
+        {
+            leftStopper.currHealth += hp;
+        } else
+        {
+            rightStopper.currHealth += hp;
+        }
+    }
+
     private void CleanOldLevel()
     {
         if (levels.Count > 5)
