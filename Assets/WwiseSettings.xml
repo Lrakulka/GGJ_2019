@@ -8,6 +8,6 @@
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
   <WwiseInstallationPathMac />
-  <WwiseInstallationPathWindows>D:\DUMkA\Install\wwise\Wwise 2018.1.4.6807</WwiseInstallationPathWindows>
-  <WwiseProjectPath>../../GGJ_2019/Home Balance/Home Balance.wproj</WwiseProjectPath>
+  <WwiseInstallationPathWindows>F:\Program Files (x86)\Audiokinetic\Wwise 2018.1.4.6807</WwiseInstallationPathWindows>
+  <WwiseProjectPath>../Home Balance/Home Balance.wproj</WwiseProjectPath>
 </WwiseSettings>
