@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{2704CB15-4BFF-48BB-9339-8D86D67B388E}" SchemaVersion="89">
 	<MixingSessions>
-		<WorkUnit Name="Default Work Unit" ID="{2704CB15-4BFF-48BB-9339-8D86D67B388E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{2704CB15-4BFF-48BB-9339-8D86D67B388E}" PersistMode="Standalone">
+			<ChildrenList>
+				<MixingSession Name="New Mixing Session" ID="{3F8D027D-8A86-4F11-B3F9-7ADD47C7F892}">
+					<ObjectList>
+						<ObjectRef Name="Sea" ID="{2A7BED46-3654-411E-B0E5-2EA4464CC205}" WorkUnitID="{6851867B-84D8-44E4-B2AC-5AFEB4352F24}"/>
+						<ObjectRef Name="Squeak_333" ID="{DEA55DA7-33F3-40DF-BA3D-1CE1C063D94D}" WorkUnitID="{6851867B-84D8-44E4-B2AC-5AFEB4352F24}"/>
+						<ObjectRef Name="Footsteps" ID="{3A117A80-F5D4-4368-AA69-96C7277786AF}" WorkUnitID="{6851867B-84D8-44E4-B2AC-5AFEB4352F24}"/>
+						<ObjectRef Name="Muz" ID="{BEAF534C-F143-4C74-8E5A-8852D4535420}" WorkUnitID="{BAF086D9-7A21-4997-80F4-A0FBADE79113}"/>
+					</ObjectList>
+				</MixingSession>
+			</ChildrenList>
+		</WorkUnit>
 	</MixingSessions>
 </WwiseDocument>

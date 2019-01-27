@@ -19,19 +19,76 @@
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{51C5BCF2-92D1-4008-BAEE-2D670199848D}"/>
 						</Reference>
 					</ReferenceList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{F3F4A89E-4A85-4804-80CB-6BE288C97C9F}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{6BBB9B9E-A451-4513-9997-24A3E3D7B13A}">
+									<PropertyList>
+										<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo>
+										<SourceFadeOut>
+											<MusicFade Name="Source Fade-out" ID="{2D913FD8-9262-445C-A22B-6BBCCBA71D40}">
+												<PropertyList>
+													<Property Name="FadeCurve" Type="int16" Value="1"/>
+													<Property Name="FadeOffset" Type="Real64" Value="1"/>
+													<Property Name="FadeTime" Type="Real64" Value="2"/>
+													<Property Name="FadeType" Type="int16" Value="1"/>
+												</PropertyList>
+											</MusicFade>
+										</SourceFadeOut>
+										<DestinationFadeIn>
+											<MusicFade Name="Destination Fade-in" ID="{98D1C6C8-CA4F-4F4B-A7AB-7F73A6E77A8E}">
+												<PropertyList>
+													<Property Name="FadeCurve" Type="int16" Value="1"/>
+													<Property Name="FadeOffset" Type="Real64" Value="-1"/>
+													<Property Name="FadeTime" Type="Real64" Value="2"/>
+												</PropertyList>
+											</MusicFade>
+										</DestinationFadeIn>
+									</TransitionInfo>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{F67F2540-6EFC-4C1C-AC70-2EBA24BB7F25}" ShortID="299124746"/>
+					</Playlist>
+				</MusicPlaylistContainer>
+				<MusicSwitchContainer Name="Music" ID="{F325C04F-70AE-4376-820E-84B410C59C45}" ShortID="260330639">
+					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="130"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0177859-38EC-46F6-8AA5-1E1E3E72B507}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{51C5BCF2-92D1-4008-BAEE-2D670199848D}"/>
+						</Reference>
+					</ReferenceList>
 					<ChildrenList>
 						<MusicSegment Name="Alastor" ID="{4BA6DB53-66B7-4CF2-8938-2CBCADA42507}" ShortID="866264865">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="90090"/>
 								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Tempo" Type="Real64" Value="130"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-20</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="New Attenuation_02" ID="{610534E1-101B-42E9-A982-33AABFC6F636}" WorkUnitID="{84160CC6-B441-4BD5-A8D1-E7C224498EC5}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0177859-38EC-46F6-8AA5-1E1E3E72B507}"/>
 								</Reference>
@@ -48,6 +105,9 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Alastor" ID="{20268B89-A6DF-4555-92C6-8B13A4D01469}" ShortID="324684549">
+											<PropertyList>
+												<Property Name="OverrideConversion" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Alastor.wav</AudioFile>
 										</AudioFileSource>
@@ -67,7 +127,7 @@
 													<PropertyList>
 														<Property Name="EndTrimOffset" Type="Real64" Value="90090"/>
 														<Property Name="FadeInMode" Type="int16" Value="0"/>
-														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1395.72984749457"/>
 													</PropertyList>
 													<AudioSourceRef Name="Alastor" ID="{20268B89-A6DF-4555-92C6-8B13A4D01469}"/>
 												</MusicClip>
@@ -81,29 +141,50 @@
 								<MusicCue Name="Exit Cue" ID="{C86637EC-30BD-459E-BB69-29F0AAE41A38}">
 									<PropertyList>
 										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="90090"/>
+										<Property Name="TimeMs" Type="Real64" Value="88615.3846153846"/>
 									</PropertyList>
 								</MusicCue>
 							</CueList>
 						</MusicSegment>
 					</ChildrenList>
 					<TransitionList>
-						<MusicTransition Name="Root" ID="{F3F4A89E-4A85-4804-80CB-6BE288C97C9F}">
+						<MusicTransition Name="Root" ID="{6E605F6B-3BAA-4B97-990D-7136BC594663}">
 							<PropertyList>
 								<Property Name="IsFolder" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
-								<MusicTransition Name="Transition" ID="{6BBB9B9E-A451-4513-9997-24A3E3D7B13A}">
-									<TransitionInfo/>
+								<MusicTransition Name="Transition" ID="{84F64C9E-B4AA-44A7-B773-E8B37F135A53}">
+									<PropertyList>
+										<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo>
+										<SourceFadeOut>
+											<MusicFade Name="Source Fade-out" ID="{E77DCF78-95EA-4EBC-BE18-4DF69861033D}">
+												<PropertyList>
+													<Property Name="FadeCurve" Type="int16" Value="1"/>
+													<Property Name="FadeOffset" Type="Real64" Value="1"/>
+													<Property Name="FadeTime" Type="Real64" Value="2"/>
+													<Property Name="FadeType" Type="int16" Value="1"/>
+												</PropertyList>
+											</MusicFade>
+										</SourceFadeOut>
+										<DestinationFadeIn>
+											<MusicFade Name="Destination Fade-in" ID="{96BAAA6E-3486-4674-A5CC-F407A86E2B31}">
+												<PropertyList>
+													<Property Name="FadeCurve" Type="int16" Value="1"/>
+													<Property Name="FadeOffset" Type="Real64" Value="-1"/>
+													<Property Name="FadeTime" Type="Real64" Value="2"/>
+												</PropertyList>
+											</MusicFade>
+										</DestinationFadeIn>
+									</TransitionInfo>
 								</MusicTransition>
 							</ChildrenList>
 							<TransitionInfo/>
 						</MusicTransition>
 					</TransitionList>
-					<Playlist>
-						<MusicPlaylistItem Name="" ID="{F67F2540-6EFC-4C1C-AC70-2EBA24BB7F25}" ShortID="299124746"/>
-					</Playlist>
-				</MusicPlaylistContainer>
+				</MusicSwitchContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</InteractiveMusic>

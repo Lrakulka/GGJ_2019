@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<Event Name="Play_Footsteps" ID="{C5B3AEE1-4E06-4CE2-B087-74FD9D5E7EAE}">
 					<ChildrenList>
-						<Action Name="" ID="{F126EA75-74CC-4121-A3F0-142D07D42606}" ShortID="754861258">
+						<Action Name="" ID="{4D569E12-37D2-4D11-83AF-C690BE2AC739}" ShortID="855630206">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
 							</PropertyList>
@@ -15,37 +15,40 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{F126EA75-74CC-4121-A3F0-142D07D42606}" ShortID="754861258">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="mute" ID="{17AC5CFB-F13F-4F59-8E1A-B105587C9B8F}" WorkUnitID="{6851867B-84D8-44E4-B2AC-5AFEB4352F24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Squeak" ID="{B574E5F8-6407-455B-A2FB-4B03B709F22B}">
 					<ChildrenList>
-						<Action Name="" ID="{86A5E704-EB0C-475C-A249-72EEDDBAC666}" ShortID="83079528">
+						<Action Name="" ID="{F8F75F07-BC28-4D33-9512-22787E0960C9}" ShortID="1064796063">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeInCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{AEC38646-E6C1-4963-8965-881D2EEDEC1C}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="4"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Squeak_1" ID="{22F56FCE-A32F-449E-ABFF-EFCA22985AA9}" WorkUnitID="{6851867B-84D8-44E4-B2AC-5AFEB4352F24}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{3CC0E1C4-E2CC-4739-82E8-C011D266F80D}" ShortID="614404861">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Squeak_2" ID="{5CA1E3E1-D418-49D1-8D83-82D9956BE380}" WorkUnitID="{6851867B-84D8-44E4-B2AC-5AFEB4352F24}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{D1A098E2-5AD6-41AB-839F-168EC479EF80}" ShortID="157640804">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Squeak_33" ID="{06D058CC-FF4E-4760-A1F3-A2FF17ED5270}" WorkUnitID="{6851867B-84D8-44E4-B2AC-5AFEB4352F24}"/>
+									<ObjectRef Name="Squeak Sequence Container" ID="{98DAF658-DBF1-47D5-997F-6F32DB60B43A}" WorkUnitID="{6851867B-84D8-44E4-B2AC-5AFEB4352F24}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -53,16 +56,6 @@
 				</Event>
 				<Event Name="Play_Sea" ID="{79B1EAAB-5C64-4ACC-8D3C-3823DA3A6109}">
 					<ChildrenList>
-						<Action Name="" ID="{82F46878-C6BD-4090-A96F-F5343F1F8B12}" ShortID="531858858">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Sea" ID="{2A7BED46-3654-411E-B0E5-2EA4464CC205}" WorkUnitID="{6851867B-84D8-44E4-B2AC-5AFEB4352F24}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{F97069F1-4899-42C2-88CC-D48FD8C77A10}" ShortID="203746359">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
