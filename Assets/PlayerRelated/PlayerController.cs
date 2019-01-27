@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool m_FacingRight = true;
     private Rigidbody2D rigidbody;
     public static PlayerController instance;
-
+    public Animator anim;
     private Vector3 startPosition;
     private List<GameObject> used = new List<GameObject>();
 
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         float h = Input.GetAxis("Horizontal");
-
+        anim.SetFloat("Start", Mathf.Abs(h)*10);
         if (h != 0)
             AkSoundEngine.PostEvent("Play_Footsteps", this.gameObject);
 
@@ -52,6 +53,18 @@ public class PlayerController : MonoBehaviour
                 Pickup();
             else
                 Drop(h);
+        }
+        Debug.Log(h);
+        if (h > 0 && !m_FacingRight)
+        {
+            // ... flip the player.
+            Flip();
+        }
+        // Otherwise if the input is moving the player left and the player is facing right...
+        else if (h < 0 && m_FacingRight)
+        {
+            // ... flip the player.
+            Flip();
         }
     }
 
@@ -138,6 +151,15 @@ public class PlayerController : MonoBehaviour
         Vector3 newPos = a.transform.position + Vector3.up * 2;
 
         this.transform.position = newPos;
+    }
+    
+    private void Flip()
+    {
+        // Switch the way the player is labelled as facing.
+        m_FacingRight = !m_FacingRight;
+
+        // Multiply the player's x local scale by -1.
+        transform.Rotate(0f, 180f, 0f);
     }
 
 }
