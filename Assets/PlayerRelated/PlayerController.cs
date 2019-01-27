@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public void Reset()
     {
         currentLevel = 0;
+        rigidbody.velocity = new Vector2(0, 0);
         this.transform.position = startPosition;
         carry = null;
         for (int i = used.Count - 1; i >= 0; i--)
@@ -91,7 +92,11 @@ public class PlayerController : MonoBehaviour
 
         for (int i = hits.Count - 1; i>=0; i--)
         {
-            if (hits[i].transform.name == "Door")
+            if (hits[i].transform.name == "NPC")
+            {
+                Eat(hits[i].transform.gameObject);
+                return;
+            } else if (hits[i].transform.name == "Door")
             {
                 EnterDoor();
                 return;
@@ -116,6 +121,12 @@ public class PlayerController : MonoBehaviour
                     hit.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
                     return;
                 }
+    }
+
+    private void Eat(GameObject food)
+    {
+        LevelManager.instance.addHPToSupport(1);
+        Destroy(food);
     }
 
     private void Drop(float speed)
