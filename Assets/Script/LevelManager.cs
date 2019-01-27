@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -9,6 +10,12 @@ public class LevelManager : MonoBehaviour
     public GameObject level;
     public GameObject balanceLevel;
     public GameObject swing;
+
+    public GameObject leftStopper;
+    public GameObject rightStopper;
+
+    public GameObject resetButton;
+
     public float generateLevelTime;
     public float levelHight;
 
@@ -26,7 +33,7 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(Generate());
+        StartGame();
     }
 
     IEnumerator Generate()
@@ -39,6 +46,13 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    public void StartGame()
+    {
+        StartCoroutine(Generate());
+        leftStopper.SetActive(true);
+        rightStopper.SetActive(true);
+    }
+
     public void StopGame()
     {
         isAlive = false;
@@ -47,8 +61,9 @@ public class LevelManager : MonoBehaviour
     public void ResetGame()
     {
         // Destroy levels
-        if (!isAlive) return;
+        //if (!isAlive) return;
         isAlive = false;
+        resetButton.SetActive(false);
 
         levelCount = 0;
         Destroy(levels[0].gameObject);
@@ -69,14 +84,13 @@ public class LevelManager : MonoBehaviour
 
         // reset other components
         SupportManager.instance.ResetHealth();
-        swing.transform.position = new Vector3(0f, 0f, 0f);
+        swing.transform.position = new Vector3(0f, -3.6f, 0f);
         swing.transform.rotation = Quaternion.identity;
-       // this.transform.rotation.;
-
-        GenerateLevel();
-
 
         isAlive = true;
+        PlayerController.instance.Reset();
+        GenerateLevel();
+        StartGame();
     }
 
     private void CleanOldLevel()
@@ -119,4 +133,6 @@ public class LevelManager : MonoBehaviour
         }
         return newLevel;
     }
+
+
 }

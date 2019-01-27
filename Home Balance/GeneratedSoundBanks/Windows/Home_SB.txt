@@ -1,0 +1,17 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	274689056	bensound-acousticbreeze	C:\Users\LATITUDE\Documents\WwiseProjects\Home Balance\.cache\Windows\SFX\bensound-acousticbreeze_138B9027.wem		\Interactive Music Hierarchy\Default Work Unit\Muz\bensound-acousticbreeze\bensound-acousticbreeze		3586804
+	357720858	run l 4  - 4	C:\Users\LATITUDE\Documents\WwiseProjects\Home Balance\.cache\Windows\SFX\run l 4  - 4_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run l 4  - 4		3653
+	441305072	run l 4  - 1	C:\Users\LATITUDE\Documents\WwiseProjects\Home Balance\.cache\Windows\SFX\run l 4  - 1_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run l 4  - 1		2847
+	513585801	run r 4  - 1	C:\Users\LATITUDE\Documents\WwiseProjects\Home Balance\.cache\Windows\SFX\run r 4  - 1_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run r 4  - 1		3432
+	529128290	run l 4  - 5	C:\Users\LATITUDE\Documents\WwiseProjects\Home Balance\.cache\Windows\SFX\run l 4  - 5_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run l 4  - 5		3079
+	550434260	run r 4  - 5	C:\Users\LATITUDE\Documents\WwiseProjects\Home Balance\.cache\Windows\SFX\run r 4  - 5_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run r 4  - 5		2922
+	636382701	run l 4  - 3	C:\Users\LATITUDE\Documents\WwiseProjects\Home Balance\.cache\Windows\SFX\run l 4  - 3_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run l 4  - 3		3410
+	651201818	bensound-tenderness	C:\Users\LATITUDE\Documents\WwiseProjects\Home Balance\.cache\Windows\SFX\bensound-tenderness_138B9027.wem		\Interactive Music Hierarchy\Default Work Unit\Muz\bensound-tenderness\bensound-tenderness		2526373
+	722157128	run l 4  - 2	C:\Users\LATITUDE\Documents\WwiseProjects\Home Balance\.cache\Windows\SFX\run l 4  - 2_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run l 4  - 2		2820
+	744980840	run r 4  - 3	C:\Users\LATITUDE\Documents\WwiseProjects\Home Balance\.cache\Windows\SFX\run r 4  - 3_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run r 4  - 3		3536
+	1028178418	run r 4  - 2	C:\Users\LATITUDE\Documents\WwiseProjects\Home Balance\.cache\Windows\SFX\run r 4  - 2_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run r 4  - 2		2837
+	1035693678	run r 4  - 4	C:\Users\LATITUDE\Documents\WwiseProjects\Home Balance\.cache\Windows\SFX\run r 4  - 4_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run r 4  - 4		2842
+
