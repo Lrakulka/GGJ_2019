@@ -43,9 +43,6 @@ public class SupportManager : MonoBehaviour
         healthLabel.text = currHealth.ToString();
         if (currHealth == 0)
         {
-            AkSoundEngine.StopAll();// StopPlayingID("Play_Music");
-            AkSoundEngine.PostEvent("Play_END", this.gameObject);
-
             this.gameObject.SetActive(false);
             UIManager.instance.ExecuteGameEnd();
         }

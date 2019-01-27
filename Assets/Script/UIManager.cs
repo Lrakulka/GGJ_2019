@@ -16,6 +16,9 @@ public class UIManager : MonoBehaviour
 
     public void ExecuteGameEnd()
     {
+
+        AkSoundEngine.StopAll();// StopPlayingID("Play_Music");
+        AkSoundEngine.PostEvent("Play_END", this.gameObject);
         LevelManager.instance.StopGame();
         levelText.text = LevelManager.instance.levelCount.ToString();
         levelText.gameObject.SetActive(true);

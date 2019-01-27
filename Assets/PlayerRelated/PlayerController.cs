@@ -134,8 +134,8 @@ public class PlayerController : MonoBehaviour
         //TODO: drop object
         Debug.Log("Dropping.");
         
-        AkSoundEngine.PostEvent("Play_Drop", gameObject);
-        AkSoundEngine.PostEvent("Play_Footsteps", this.gameObject);
+       // AkSoundEngine.PostEvent("Play_Drop", gameObject);
+       // AkSoundEngine.PostEvent("Play_Footsteps", this.gameObject);
 
         Rigidbody2D rigidbodyReference = carry.transform.GetComponent<Rigidbody2D>();
 
