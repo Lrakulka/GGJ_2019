@@ -35,6 +35,9 @@ public class PlayerController : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal");
 
+        if (h != 0)
+            AkSoundEngine.PostEvent("Play_Footsteps", this.gameObject);
+
         rigidbody.velocity = new Vector2(h * speed, rigidbody.velocity.y);
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -123,7 +126,18 @@ public class PlayerController : MonoBehaviour
 
         Debug.Log("Entering door!");
         currentLevel++;
-        this.transform.position = LevelManager.instance.levels[currentLevel].transform.position;
+
+        Transform a = LevelManager.instance.levels[currentLevel].transform.Find("Shuffleable");
+
+       // Debug.Log(a.name);
+
+        a = a.Find("DoorX");
+
+        // Debug.Log(a.name);
+
+        Vector3 newPos = a.transform.position + Vector3.up * 2;
+
+        this.transform.position = newPos;
     }
 
 }

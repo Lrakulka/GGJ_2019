@@ -187,7 +187,7 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 00e8e1680479aa4ca88571fd33ed46d8
-    m_lastTime: -8586530277633003966
+    m_lastTime: -8586530222165022088
     List:
     - name: Home_SB
       guid: 81179d6a45f6544d8269f0dbc8cfcdd8
@@ -202,8 +202,20 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 0f499a0a7054754bbe07f61d8095ffa9
-    m_lastTime: -8586530277632658723
+    m_lastTime: -8586530222164816958
     List:
+    - name: Play_END
+      guid: a2d132afdc39b84e9fa6470ba0ca7c9d
+      id: 2472290785
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_END
+        ObjectType: 3
+      Path: Default Work Unit\Play_END
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Footsteps
       guid: e1aeb3c5064ee24cb08774fd9d5e7eae
       id: 3854155799
@@ -412,5 +424,7 @@ MonoBehaviour:
   - /Home Balance
   - /Home Balance/Events
   - /Home Balance/Events/Default Work Unit
+  - /Home Balance/SoundBanks
+  - /Home Balance/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
