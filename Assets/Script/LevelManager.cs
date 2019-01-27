@@ -89,7 +89,6 @@ public class LevelManager : MonoBehaviour
 
         isAlive = true;
         PlayerController.instance.Reset();
-        GenerateLevel();
         StartGame();
     }
 
@@ -113,6 +112,15 @@ public class LevelManager : MonoBehaviour
         }
         levels.Add(newLevel);
         balancerLevels.Add(newBalanceLevel);
+
+        //remove one door
+        if (levelCount == 0) {
+            Transform a = newLevel.transform.Find("Shuffleable");
+            a = a.Find("DoorX");
+
+            Destroy(a.gameObject);
+        }
+
         levelCount++;
     }
 

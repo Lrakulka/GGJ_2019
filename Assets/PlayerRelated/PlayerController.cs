@@ -78,7 +78,11 @@ public class PlayerController : MonoBehaviour
 
         for (int i = hits.Count - 1; i>=0; i--)
         {
-            if (hits[i].transform.name == "Door")
+            if (hits[i].transform.name == "NPC")
+            {
+                Eat(hits[i].transform.gameObject);
+                return;
+            } else if (hits[i].transform.name == "Door")
             {
                 EnterDoor();
                 return;
@@ -103,6 +107,11 @@ public class PlayerController : MonoBehaviour
                     hit.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
                     return;
                 }
+    }
+
+    private void Eat(GameObject food)
+    {
+        Destroy(food);
     }
 
     private void Drop(float speed)
