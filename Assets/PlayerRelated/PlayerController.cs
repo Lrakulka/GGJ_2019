@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
             else
                 Drop(h);
         }
-        Debug.Log(h);
+        //Debug.Log(h);
         if (h > 0 && !m_FacingRight)
         {
             // ... flip the player.
