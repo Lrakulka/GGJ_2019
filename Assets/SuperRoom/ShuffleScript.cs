@@ -30,7 +30,6 @@ public class ShuffleScript : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(Time.realtimeSinceStartup);
         boolGrid = new bool[2, length];
         for(int i = 0; i < boolGrid.GetLength(0); i++)
         {
@@ -44,13 +43,11 @@ public class ShuffleScript : MonoBehaviour
         {
             AddFurniture(grid[i]);
         }
-        Debug.Log(Time.realtimeSinceStartup);
     }
 
     bool AddFurniture(Tile tile)
     {
         
-        GameObject go = Instantiate(tile.transform.gameObject, transform);
         int count = 10;
         int pos;
         Vector3 supplement = new Vector3(0,0, 0);
@@ -84,7 +81,7 @@ public class ShuffleScript : MonoBehaviour
             count++;
         } while (true && count < 100);
 
-        go.transform.position += new Vector3(tileSize.x * pos - tileSize.x * length / 2, -tileSize.y + (tile.pos) * tileSize.y, 0) + supplement;
+        tile.transform.localPosition += new Vector3(tileSize.x * pos - tileSize.x * length / 2, -tileSize.y + (tile.pos) * tileSize.y, 0) + supplement;
         return true;
     }
 
