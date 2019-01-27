@@ -84,12 +84,12 @@ public class LevelManager : MonoBehaviour
 
         // reset other components
         SupportManager.instance.ResetHealth();
-        swing.transform.position = new Vector3(0f, 0f, 0f);
+        swing.transform.position = new Vector3(0f, -3.6f, 0f);
         swing.transform.rotation = Quaternion.identity;
 
         isAlive = true;
         PlayerController.instance.Reset();
-
+        GenerateLevel();
         StartGame();
     }
 
