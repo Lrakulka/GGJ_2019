@@ -44,11 +44,11 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (!LevelManager.instance.isAlive)
+           /* if (!LevelManager.instance.isAlive)
             {
                 LevelManager.instance.ResetGame();
                 return;
-            }
+            }*/
 
             if (carry == null)
                 Pickup();
@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
 
         for (int i = hits.Count - 1; i>=0; i--)
         {
-            if (hits[i].transform.name == "NPC")
+            if (hits[i].transform.tag == "NPC")
             {
                 Eat(hits[i].transform.gameObject);
                 return;

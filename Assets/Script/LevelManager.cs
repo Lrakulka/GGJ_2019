@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
@@ -10,6 +11,10 @@ public class LevelManager : MonoBehaviour
     public GameObject level;
     public GameObject balanceLevel;
     public GameObject swing;
+
+    public GameObject Npc;
+
+    public List<GameObject> npcList = new List<GameObject>();
 
     public SupportManager leftStopper;
     public SupportManager rightStopper;
@@ -58,6 +63,8 @@ public class LevelManager : MonoBehaviour
 
     public void ResetGame()
     {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().ToString());
+
         // Destroy levels
         //if (!isAlive) return;
         isAlive = false;
@@ -84,6 +91,13 @@ public class LevelManager : MonoBehaviour
         rightStopper.ResetHealth();
         swing.transform.position = new Vector3(0f, -3.6f, 0f);
         swing.transform.rotation = Quaternion.identity;
+
+        foreach (var n in npcList)
+            if (n != null)
+                Destroy(n);
+
+        npcList.Clear();
+
 
         isAlive = true;
         PlayerController.instance.Reset();
@@ -124,6 +138,10 @@ public class LevelManager : MonoBehaviour
         }
         levels.Add(newLevel);
         balancerLevels.Add(newBalanceLevel);
+
+        GameObject npc = GameObject.Instantiate(Npc);
+        npcList.Add(npc);
+        npc.transform.position = newLevel.transform.position + Vector3.up;
 
         //remove one door
         if (levelCount == 0) {
