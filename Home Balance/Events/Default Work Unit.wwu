@@ -92,6 +92,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_END" ID="{AF32D1A2-39DC-4EB8-9FA6-470BA0CA7C9D}">
+					<ChildrenList>
+						<Action Name="" ID="{AFC872E9-E913-426A-B0AF-948622B60542}" ShortID="783194653">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="END" ID="{E71EEEC0-F7CF-4344-939C-CFF1EDEF2E4F}" WorkUnitID="{6851867B-84D8-44E4-B2AC-5AFEB4352F24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
