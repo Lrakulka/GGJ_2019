@@ -1842,6 +1842,7 @@ MonoBehaviour:
     type: 3}
   swing: {fileID: 1169916019}
   Npc: {fileID: 5728914820163845225, guid: 8933b3b04dc7ad740b14919912a39245, type: 3}
+  npcList: []
   leftStopper: {fileID: 1883396880}
   rightStopper: {fileID: 1111787744}
   generateLevelTime: 3
@@ -3453,7 +3454,7 @@ PrefabInstance:
     - target: {fileID: 5728914820163845225, guid: 8933b3b04dc7ad740b14919912a39245,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 213299337002034225, guid: 8933b3b04dc7ad740b14919912a39245,
         type: 3}
@@ -3510,6 +3511,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2850639739066940141, guid: 8933b3b04dc7ad740b14919912a39245, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8933b3b04dc7ad740b14919912a39245, type: 3}

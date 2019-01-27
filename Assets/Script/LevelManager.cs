@@ -98,6 +98,11 @@ public class LevelManager : MonoBehaviour
 
         npcList.Clear();
 
+        if (npcList.Count > 3)
+        {
+            if (npcList[npcList.Count - 3] != null)
+                Destroy(npcList[npcList.Count - 3]);
+        }
 
         isAlive = true;
         PlayerController.instance.Reset();
