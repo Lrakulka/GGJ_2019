@@ -202,8 +202,20 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 0f499a0a7054754bbe07f61d8095ffa9
-    m_lastTime: -8586530222164816958
+    m_lastTime: -8586530191405804920
     List:
+    - name: Play_Drop
+      guid: 000240fd18ae07448992c957a0340fad
+      id: 2007351433
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Drop
+        ObjectType: 3
+      Path: Default Work Unit\Play_Drop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_END
       guid: a2d132afdc39b84e9fa6470ba0ca7c9d
       id: 2472290785

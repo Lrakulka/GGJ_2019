@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	1633191099	Squeak			\Default Work Unit\Squeak	
+	2472290785	Play_END			\Default Work Unit\Play_END	
 	2932040671	Play_Music			\Default Work Unit\Play_Music	
 	3157907375	Play_Sea			\Default Work Unit\Play_Sea	
 	3854155799	Play_Footsteps			\Default Work Unit\Play_Footsteps	
@@ -8,11 +9,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	24654044	run l 4  - 2	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\run l 4  - 2_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run l 4  - 2		2820
 	120001988	run l 4  - 4	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\run l 4  - 4_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run l 4  - 4		3653
 	142475990	Squeak_2_2	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\Squeak_2_2_047226E7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Squeak Sequence Container\Squeak Blend Container\Squeak_2\Squeak_2_2		73484
+	142569409	Lose_1_1	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\Lose_1_1_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\END\1\Lose_1_1		58842
 	192867705	run r 4  - 6	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\run r 4  - 6_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run r 4  - 6		2655
 	217941441	run l 4  - 6	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\run l 4  - 6_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run l 4  - 6		2754
 	247274769	Sea_Fone	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\Sea_Fone_4343AB7F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sea\Sea_Fone		1841944
 	249713425	Squeak_2_3	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\Squeak_2_3_CA9789B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Squeak Sequence Container\Squeak Blend Container\Squeak_2\Squeak_2_3		77217
 	292309397	run l 4  - 10	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\run l 4  - 10_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run l 4  - 10		3784
+	312584919	Lose_1_3	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\Lose_1_3_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\END\1\Lose_1_3		106142
 	313596564	Squeak_1_2	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\Squeak_1_2_120F3694.wem		\Actor-Mixer Hierarchy\Default Work Unit\Squeak Sequence Container\Squeak Blend Container\Squeak_1\Squeak_1_2		127703
 	317176640	run l 4  - 1	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\run l 4  - 1_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run l 4  - 1		2847
 	320744133	run l 4  - 3	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\run l 4  - 3_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run l 4  - 3		3410
@@ -26,18 +29,25 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	506365545	run r 4  - 3	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\run r 4  - 3_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run r 4  - 3		3536
 	520637831	run r 4  - 7	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\run r 4  - 7_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run r 4  - 7		2666
 	549085312	AnmlTrx10-22	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\AnmlTrx10-22_2CCA1776.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sea\AnmlTrx10-22		2871532
+	574945511	Lose_2_2	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\Lose_2_2_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\END\2\Lose_2_2		102221
 	607815609	More s chaykami (SI1)	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\More s chaykami (SI1)_8F3B55A1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sea\More s chaykami (SI1)		1524869
 	614769638	run r 4  - 9	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\run r 4  - 9_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run r 4  - 9		2891
 	639715777	run r 4  - 8	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\run r 4  - 8_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run r 4  - 8		2822
 	645598777	run r 4  - 1	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\run r 4  - 1_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run r 4  - 1		3432
+	677018497	Lose_2_1	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\Lose_2_1_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\END\2\Lose_2_1		113608
+	679968663	Lose_2_3	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\Lose_2_3_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\END\2\Lose_2_3		102982
 	694431085	run l 4  - 8	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\run l 4  - 8_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run l 4  - 8		3498
 	697444713	run l 4  - 9	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\run l 4  - 9_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run l 4  - 9		2601
+	724555173	Lose_3_1	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\Lose_3_1_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\END\3\Lose_3_1		211139
+	730498299	Lose_3_2	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\Lose_3_2_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\END\3\Lose_3_2		333493
 	780201792	Squeak_4	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\Squeak_4_30D3666E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Squeak Sequence Container\Squeak Blend Container\Squeak_33\Squeak_4		109137
+	781816771	Lose_2_4	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\Lose_2_4_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\END\2\Lose_2_4		60790
 	791238140	run r 4  - 4	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\run r 4  - 4_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run r 4  - 4		2842
 	801617506	run l 4  - 5	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\run l 4  - 5_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run l 4  - 5		3079
 	831501642	mute	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\mute_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\mute		3602
 	850937068	run r 4  - 10	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\run r 4  - 10_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run r 4  - 10		2707
 	891816535	run r 4  - 2	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\run r 4  - 2_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run r 4  - 2		2837
 	957295396	run l 4  - 7	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\run l 4  - 7_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\run l 4  - 7		3389
+	971395140	Lose_1_2	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\Lose_1_2_030CF4A9.wem		\Actor-Mixer Hierarchy\Default Work Unit\END\1\Lose_1_2		77950
 	982400278	Squeak_3	D:\project\GGJ_2019\Home Balance\.cache\Windows\SFX\Squeak_3_EFF99C1E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Squeak Sequence Container\Squeak Blend Container\Squeak_33\Squeak_3		108666
 
