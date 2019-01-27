@@ -131,7 +131,7 @@ public class PlayerController : MonoBehaviour
 
        // Debug.Log(a.name);
 
-        a = a.Find("Door in");
+        a = a.Find("DoorX");
 
         // Debug.Log(a.name);
 
