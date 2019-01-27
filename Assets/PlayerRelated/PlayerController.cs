@@ -35,6 +35,9 @@ public class PlayerController : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal");
 
+        if (h != 0)
+            AkSoundEngine.PostEvent("Play_Footsteps", this.gameObject);
+
         rigidbody.velocity = new Vector2(h * speed, rigidbody.velocity.y);
 
         if (Input.GetKeyDown(KeyCode.Space))
