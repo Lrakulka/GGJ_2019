@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0A9A490F-5470-4B75-BE07-F61D8095FFA9}" SchemaVersion="89">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{0A9A490F-5470-4B75-BE07-F61D8095FFA9}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Footsteps" ID="{C5B3AEE1-4E06-4CE2-B087-74FD9D5E7EAE}">
+					<ChildrenList>
+						<Action Name="" ID="{F126EA75-74CC-4121-A3F0-142D07D42606}" ShortID="754861258">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps" ID="{3A117A80-F5D4-4368-AA69-96C7277786AF}" WorkUnitID="{6851867B-84D8-44E4-B2AC-5AFEB4352F24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Squeak" ID="{B574E5F8-6407-455B-A2FB-4B03B709F22B}">
+					<ChildrenList>
+						<Action Name="" ID="{86A5E704-EB0C-475C-A249-72EEDDBAC666}" ShortID="83079528">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Squeak_1" ID="{22F56FCE-A32F-449E-ABFF-EFCA22985AA9}" WorkUnitID="{6851867B-84D8-44E4-B2AC-5AFEB4352F24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3CC0E1C4-E2CC-4739-82E8-C011D266F80D}" ShortID="614404861">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Squeak_2" ID="{5CA1E3E1-D418-49D1-8D83-82D9956BE380}" WorkUnitID="{6851867B-84D8-44E4-B2AC-5AFEB4352F24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D1A098E2-5AD6-41AB-839F-168EC479EF80}" ShortID="157640804">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Squeak_33" ID="{06D058CC-FF4E-4760-A1F3-A2FF17ED5270}" WorkUnitID="{6851867B-84D8-44E4-B2AC-5AFEB4352F24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Sea" ID="{79B1EAAB-5C64-4ACC-8D3C-3823DA3A6109}">
+					<ChildrenList>
+						<Action Name="" ID="{82F46878-C6BD-4090-A96F-F5343F1F8B12}" ShortID="531858858">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sea" ID="{2A7BED46-3654-411E-B0E5-2EA4464CC205}" WorkUnitID="{6851867B-84D8-44E4-B2AC-5AFEB4352F24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F97069F1-4899-42C2-88CC-D48FD8C77A10}" ShortID="203746359">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sea" ID="{2A7BED46-3654-411E-B0E5-2EA4464CC205}" WorkUnitID="{6851867B-84D8-44E4-B2AC-5AFEB4352F24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A9F1A2F1-A0F5-41AB-A2FF-B3E1D61FD807}" ShortID="789117958">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sea" ID="{2A7BED46-3654-411E-B0E5-2EA4464CC205}" WorkUnitID="{6851867B-84D8-44E4-B2AC-5AFEB4352F24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Music" ID="{C041319B-D9B3-44BA-9EB9-FBBD94698BD5}">
+					<ChildrenList>
+						<Action Name="" ID="{C0EB5D96-BF63-4F94-8E11-62DA3129909B}" ShortID="1020504671">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Alastor" ID="{4BA6DB53-66B7-4CF2-8938-2CBCADA42507}" WorkUnitID="{BAF086D9-7A21-4997-80F4-A0FBADE79113}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

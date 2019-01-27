@@ -5,6 +5,9 @@ using UnityEngine;
 public class SupportManager : MonoBehaviour
 {
     public static SupportManager instance;
+    public GameObject resetGameButton;
+    public UnityEngine.UI.Text levelText;
+    public UnityEngine.UI.Text healthLabel;
 
     public int health;
     private float prevTime;
@@ -24,6 +27,7 @@ public class SupportManager : MonoBehaviour
     public void ResetHealth()
     {
         currHealth = health;
+        healthLabel.text = currHealth.ToString();
     }
 
     // Update is called once per frame
@@ -40,13 +44,14 @@ public class SupportManager : MonoBehaviour
         }
         prevTime = Time.realtimeSinceStartup;
         currHealth--;
+        healthLabel.text = currHealth.ToString();
         if (currHealth == 0)
         {
-           
-            LevelManager.instance.ResetGame();
-            
-           // LevelManager.instance.StopGame();
+            LevelManager.instance.StopGame();
+            levelText.text = LevelManager.instance.levelCount.ToString();
+            levelText.gameObject.SetActive(true);
+            resetGameButton.SetActive(true);
+            this.gameObject.SetActive(false);
         }
-        Debug.Log(currHealth);
     }
 }
