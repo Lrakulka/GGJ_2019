@@ -11,10 +11,8 @@ public class LevelManager : MonoBehaviour
     public GameObject balanceLevel;
     public GameObject swing;
 
-    public GameObject leftStopper;
-    public GameObject rightStopper;
-
-    public GameObject resetButton;
+    public SupportManager leftStopper;
+    public SupportManager rightStopper;
 
     public float generateLevelTime;
     public float levelHight;
@@ -49,8 +47,8 @@ public class LevelManager : MonoBehaviour
     public void StartGame()
     {
         StartCoroutine(Generate());
-        leftStopper.SetActive(true);
-        rightStopper.SetActive(true);
+        leftStopper.gameObject.SetActive(true);
+        rightStopper.gameObject.SetActive(true);
     }
 
     public void StopGame()
@@ -63,18 +61,16 @@ public class LevelManager : MonoBehaviour
         // Destroy levels
         //if (!isAlive) return;
         isAlive = false;
-        resetButton.SetActive(false);
 
         levelCount = 0;
         Destroy(levels[0].gameObject);
-        Destroy(balancerLevels[0].gameObject);
         
         foreach(var l in levels)
         {
             if (l != null)
                 Destroy(l.gameObject);
         }
-        foreach (var l in balancerLevels)
+        foreach (var l in levels)
         {
             if (l != null)
                 Destroy(l.gameObject);
@@ -84,17 +80,28 @@ public class LevelManager : MonoBehaviour
         balancerLevels = new List<GameObject>();
 
         // reset other components
-        SupportManager.instance.ResetHealth();
+        leftStopper.ResetHealth();
+        rightStopper.ResetHealth();
         swing.transform.position = new Vector3(0f, -3.6f, 0f);
         swing.transform.rotation = Quaternion.identity;
 
         isAlive = true;
         PlayerController.instance.Reset();
-        GenerateLevel();
         AkSoundEngine.PostEvent("Play_Music", gameObject);
         AkSoundEngine.PostEvent("Play_Sea", this.gameObject);
         AkSoundEngine.PostEvent("Squeak", gameObject);
         StartGame();
+    }
+
+    public void addHPToSupport(int hp)
+    {
+        if (leftStopper.currHealth < rightStopper.currHealth)
+        {
+            leftStopper.currHealth += hp;
+        } else
+        {
+            rightStopper.currHealth += hp;
+        }
     }
 
     private void CleanOldLevel()
@@ -108,23 +115,28 @@ public class LevelManager : MonoBehaviour
 
     private void GenerateLevel()
     {
-        GameObject newLevel = CreateLevel(level, levelHight, levelCount, "Level" + levelCount,
+        GameObject newLevel = createLevel(level, levelHight, levelCount, "Level" + levelCount,
                 levels.Count == 0 ? null : levels[levels.Count - 1]);
-        levels.Add(newLevel);
         GameObject newBalanceLevel = newLevel;
         if (balancerLevels.Count != 0)
         {
-            newBalanceLevel = CreateLevel(balanceLevel, -levelHight, levelCount, "LevelBalance" + levelCount, balancerLevels[balancerLevels.Count - 1]);
-        } else
-        {
-            newBalanceLevel = CreateLevel(balanceLevel, -levelHight, levelCount, "LevelBalance" + levelCount, levels[levels.Count - 1]);
+            newBalanceLevel = createLevel(balanceLevel, -levelHight, levelCount, "LevelBalance" + levelCount, balancerLevels[balancerLevels.Count - 1]);
         }
+        levels.Add(newLevel);
         balancerLevels.Add(newBalanceLevel);
+
+        //remove one door
+        if (levelCount == 0) {
+            Transform a = newLevel.transform.Find("Shuffleable");
+            a = a.Find("DoorX");
+
+            Destroy(a.gameObject);
+        }
 
         levelCount++;
     }
 
-    private GameObject CreateLevel(GameObject level, float levelHight, int levelCount, string name, GameObject prevLevel)
+    private GameObject createLevel(GameObject level, float levelHight, int levelCount, string name, GameObject prevLevel)
     {
         GameObject newLevel = GameObject.Instantiate(level);
         newLevel.transform.SetParent(swing.transform);
@@ -141,4 +153,6 @@ public class LevelManager : MonoBehaviour
         }
         return newLevel;
     }
+
+
 }
