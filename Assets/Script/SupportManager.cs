@@ -49,6 +49,7 @@ public class SupportManager : MonoBehaviour
         {
             LevelManager.instance.StopGame();
             levelText.text = LevelManager.instance.levelCount.ToString();
+            levelText.gameObject.SetActive(true);
             resetGameButton.SetActive(true);
             this.gameObject.SetActive(false);
         }

@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal");
 
-        rigidbody.velocity = new Vector2(h * speed, 0);
+        rigidbody.velocity = new Vector2(h * speed, rigidbody.velocity.y);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
