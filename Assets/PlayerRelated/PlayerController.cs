@@ -112,6 +112,7 @@ public class PlayerController : MonoBehaviour
 
     private void Eat(GameObject food)
     {
+        LevelManager.instance.addHPToSupport(1);
         Destroy(food);
     }
 
