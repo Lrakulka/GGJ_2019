@@ -14,6 +14,8 @@ public class LevelManager : MonoBehaviour
     public GameObject leftStopper;
     public GameObject rightStopper;
 
+    public GameObject resetButton;
+
     public float generateLevelTime;
     public float levelHight;
 
@@ -61,16 +63,18 @@ public class LevelManager : MonoBehaviour
         // Destroy levels
         //if (!isAlive) return;
         isAlive = false;
+        resetButton.SetActive(false);
 
         levelCount = 0;
         Destroy(levels[0].gameObject);
+        Destroy(balancerLevels[0].gameObject);
         
         foreach(var l in levels)
         {
             if (l != null)
                 Destroy(l.gameObject);
         }
-        foreach (var l in levels)
+        foreach (var l in balancerLevels)
         {
             if (l != null)
                 Destroy(l.gameObject);
@@ -81,11 +85,12 @@ public class LevelManager : MonoBehaviour
 
         // reset other components
         SupportManager.instance.ResetHealth();
-        swing.transform.position = new Vector3(0f, 0f, 0f);
+        swing.transform.position = new Vector3(0f, -3.6f, 0f);
         swing.transform.rotation = Quaternion.identity;
 
         isAlive = true;
-
+        PlayerController.instance.Reset();
+        GenerateLevel();
         StartGame();
     }
 
@@ -100,19 +105,23 @@ public class LevelManager : MonoBehaviour
 
     private void GenerateLevel()
     {
-        GameObject newLevel = createLevel(level, levelHight, levelCount, "Level" + levelCount,
+        GameObject newLevel = CreateLevel(level, levelHight, levelCount, "Level" + levelCount,
                 levels.Count == 0 ? null : levels[levels.Count - 1]);
+        levels.Add(newLevel);
         GameObject newBalanceLevel = newLevel;
         if (balancerLevels.Count != 0)
         {
-            newBalanceLevel = createLevel(balanceLevel, -levelHight, levelCount, "LevelBalance" + levelCount, balancerLevels[balancerLevels.Count - 1]);
+            newBalanceLevel = CreateLevel(balanceLevel, -levelHight, levelCount, "LevelBalance" + levelCount, balancerLevels[balancerLevels.Count - 1]);
+        } else
+        {
+            newBalanceLevel = CreateLevel(balanceLevel, -levelHight, levelCount, "LevelBalance" + levelCount, levels[levels.Count - 1]);
         }
-        levels.Add(newLevel);
         balancerLevels.Add(newBalanceLevel);
+
         levelCount++;
     }
 
-    private GameObject createLevel(GameObject level, float levelHight, int levelCount, string name, GameObject prevLevel)
+    private GameObject CreateLevel(GameObject level, float levelHight, int levelCount, string name, GameObject prevLevel)
     {
         GameObject newLevel = GameObject.Instantiate(level);
         newLevel.transform.SetParent(swing.transform);

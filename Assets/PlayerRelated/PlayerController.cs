@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rigidbody;
+    public static PlayerController instance;
 
     private Vector3 startPosition;
+    private List<GameObject> used = new List<GameObject>();
 
     public float speed = 10;
 
@@ -14,18 +16,35 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         startPosition = this.transform.position;
         rigidbody = GetComponent<Rigidbody2D>();
+    }
+
+    public void Reset()
+    {
+        currentLevel = 0;
+        this.transform.position = startPosition;
+        carry = null;
+        for (int i = used.Count - 1; i >= 0; i--)
+            Destroy(used[i]);
+        used.Clear();
     }
 
     private void FixedUpdate()
     {
         float h = Input.GetAxis("Horizontal");
 
-        rigidbody.velocity = new Vector2(h * speed, 0);
+        rigidbody.velocity = new Vector2(h * speed, rigidbody.velocity.y);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            if (!LevelManager.instance.isAlive)
+            {
+                LevelManager.instance.ResetGame();
+                return;
+            }
+
             if (carry == null)
                 Pickup();
             else
@@ -46,33 +65,41 @@ public class PlayerController : MonoBehaviour
         //Debug.DrawRay(startPos + Vector3.up * 2, Vector3.forward * 100, Color.red, 100);
         //Debug.DrawRay(startPos + Vector3.up * 3, Vector3.forward * 100, Color.red, 100);
 
-        RaycastHit2D[] hits = Physics2D.RaycastAll(startPos, Vector3.forward, 100);
-        if (hits.Length <= 1)
-            hits = Physics2D.RaycastAll(startPos + Vector3.down, Vector3.forward, 100);
-        if (hits.Length <= 1)
-            hits = Physics2D.RaycastAll(startPos + Vector3.up, Vector3.forward, 100);
-        if (hits.Length <= 1)
-            hits = Physics2D.RaycastAll(startPos + Vector3.up * 2, Vector3.forward, 100);
-        if (hits.Length <= 1)
-            hits = Physics2D.RaycastAll(startPos + Vector3.up * 3, Vector3.forward, 100);
-        if (hits.Length <= 1)
-            hits = Physics2D.RaycastAll(startPos + Vector3.down  * 1.5f, Vector3.forward, 100);
+        List<RaycastHit2D> hits = new List<RaycastHit2D>();
+        hits.AddRange(Physics2D.RaycastAll(startPos, Vector3.forward, 100));
+        hits.AddRange(Physics2D.RaycastAll(startPos + Vector3.down, Vector3.forward, 100));
+        hits.AddRange(Physics2D.RaycastAll(startPos + Vector3.up, Vector3.forward, 100));
+        hits.AddRange(Physics2D.RaycastAll(startPos + Vector3.up * 2, Vector3.forward, 100));
+        hits.AddRange(Physics2D.RaycastAll(startPos + Vector3.up * 3, Vector3.forward, 100));
+        hits.AddRange(Physics2D.RaycastAll(startPos + Vector3.down  * 1.5f, Vector3.forward, 100));
 
-        if (hits.Length > 0)
-            foreach (var hit in hits)
-            if (hit.transform.gameObject != this.gameObject)
+        for (int i = hits.Count - 1; i>=0; i--)
+        {
+            if (hits[i].transform.name == "Door")
             {
-                if (hit.transform.name == "Door")
+                EnterDoor();
+                return;
+            } else if (hits[i].transform.name == this.transform.name)
+            {
+                hits.RemoveAt(i);
+            } else if (hits[i].transform.tag == "Ignore")
+            {
+                hits.RemoveAt(i);
+            }
+        }
+
+        if (hits.Count > 0)
+            foreach (var hit in hits)
+                if (hit.transform.gameObject != this.gameObject)
                 {
-                    EnterDoor();
+                    Debug.Log("Picking " + hit.transform.name);
+                    carry = hit.transform.gameObject;
+                    used.Add(carry);
+                    hit.transform.SetParent(this.transform);
+                    hit.transform.position = hit.transform.position + Vector3.up;
+                    hit.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
                     return;
                 }
-                
-                carry = hit.transform.gameObject;
-                hit.transform.SetParent(this.transform);
-                hit.transform.position = hit.transform.position + Vector3.up;
-                hit.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-            }
     }
 
     private void Drop(float speed)
@@ -83,7 +110,7 @@ public class PlayerController : MonoBehaviour
         Rigidbody2D rigidbodyReference = carry.transform.GetComponent<Rigidbody2D>();
 
         rigidbodyReference.bodyType = RigidbodyType2D.Dynamic;
-        rigidbodyReference.velocity = new Vector2(speed * 500 / rigidbodyReference.mass, 0);
+        rigidbodyReference.velocity = new Vector2(speed * 500 / rigidbodyReference.mass, 300 / rigidbodyReference.mass);
 
         carry.transform.SetParent(null);
         carry = null;
