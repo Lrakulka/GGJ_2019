@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
 
     public void Reset()
     {
+        currentLevel = 0;
         this.transform.position = startPosition;
         carry = null;
         for (int i = used.Count - 1; i >= 0; i--)
@@ -109,7 +110,7 @@ public class PlayerController : MonoBehaviour
         Rigidbody2D rigidbodyReference = carry.transform.GetComponent<Rigidbody2D>();
 
         rigidbodyReference.bodyType = RigidbodyType2D.Dynamic;
-        rigidbodyReference.velocity = new Vector2(speed * 500 / rigidbodyReference.mass, 0);
+        rigidbodyReference.velocity = new Vector2(speed * 500 / rigidbodyReference.mass, 300 / rigidbodyReference.mass);
 
         carry.transform.SetParent(null);
         carry = null;
