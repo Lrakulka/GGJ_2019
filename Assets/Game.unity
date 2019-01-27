@@ -172,7 +172,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 9.947003
+  orthographic size: 10.868063
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -841,7 +841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.30588236, g: 1, b: 0.34509805, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2971698, g: 1, b: 0.34492946, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1456,7 +1456,7 @@ MonoBehaviour:
   resetGameButton: {fileID: 1617726327}
   levelText: {fileID: 964577701}
   healthLabel: {fileID: 1084866132}
-  health: 100
+  health: 20
 --- !u!50 &1111787745
 Rigidbody2D:
   serializedVersion: 4
@@ -2675,7 +2675,7 @@ MonoBehaviour:
   resetGameButton: {fileID: 1617726327}
   levelText: {fileID: 964577701}
   healthLabel: {fileID: 883568074}
-  health: 10
+  health: 20
 --- !u!50 &1883396881
 Rigidbody2D:
   serializedVersion: 4
