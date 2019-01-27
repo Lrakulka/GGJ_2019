@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     public void Reset()
     {
         currentLevel = 0;
+        rigidbody.velocity = new Vector2(0, 0);
         this.transform.position = startPosition;
         carry = null;
         for (int i = used.Count - 1; i >= 0; i--)
