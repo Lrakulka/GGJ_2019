@@ -10,6 +10,7 @@
 						<ObjectRef Name="Squeak Blend Container" ID="{4355D9F4-9C08-4673-9E9C-8A1CD81427E0}" WorkUnitID="{6851867B-84D8-44E4-B2AC-5AFEB4352F24}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Sea" ID="{79B1EAAB-5C64-4ACC-8D3C-3823DA3A6109}" WorkUnitID="{0A9A490F-5470-4B75-BE07-F61D8095FFA9}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Footsteps" ID="{C5B3AEE1-4E06-4CE2-B087-74FD9D5E7EAE}" WorkUnitID="{0A9A490F-5470-4B75-BE07-F61D8095FFA9}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_END" ID="{AF32D1A2-39DC-4EB8-9FA6-470BA0CA7C9D}" WorkUnitID="{0A9A490F-5470-4B75-BE07-F61D8095FFA9}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

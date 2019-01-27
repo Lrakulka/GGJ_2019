@@ -1439,6 +1439,235 @@
 						</BlendContainer>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<BlendContainer Name="END" ID="{E71EEEC0-F7CF-4344-939C-CFF1EDEF2E4F}" ShortID="77637593">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-19</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0177859-38EC-46F6-8AA5-1E1E3E72B507}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{51C5BCF2-92D1-4008-BAEE-2D670199848D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="1" ID="{92784831-20E8-4B87-9712-4FA268030780}" ShortID="548135542">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0177859-38EC-46F6-8AA5-1E1E3E72B507}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{51C5BCF2-92D1-4008-BAEE-2D670199848D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Lose_1_1" ID="{BC0FF317-063F-4CBB-A3FA-4796D9C114B4}" ShortID="634177704">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0177859-38EC-46F6-8AA5-1E1E3E72B507}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{51C5BCF2-92D1-4008-BAEE-2D670199848D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lose_1_1" ID="{6226F35E-E373-472B-90DB-7D2B70A0D52B}" ShortID="142569409">
+											<Language>SFX</Language>
+											<AudioFile>Lose_1_1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lose_1_1" ID="{6226F35E-E373-472B-90DB-7D2B70A0D52B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Lose_1_2" ID="{96A61E84-E255-47FD-9CF8-8DBF53AD14DD}" ShortID="408762399">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0177859-38EC-46F6-8AA5-1E1E3E72B507}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{51C5BCF2-92D1-4008-BAEE-2D670199848D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lose_1_2" ID="{BC9ED636-A0D9-4FFB-912E-16077417CF09}" ShortID="971395140">
+											<Language>SFX</Language>
+											<AudioFile>Lose_1_2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lose_1_2" ID="{BC9ED636-A0D9-4FFB-912E-16077417CF09}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Lose_1_3" ID="{5B014471-1538-4B4F-9A0A-53A9C7C505C2}" ShortID="969811935">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0177859-38EC-46F6-8AA5-1E1E3E72B507}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{51C5BCF2-92D1-4008-BAEE-2D670199848D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lose_1_3" ID="{FD0CDAD0-DB3B-44AB-B5B0-F78B5A6B3E03}" ShortID="312584919">
+											<Language>SFX</Language>
+											<AudioFile>Lose_1_3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lose_1_3" ID="{FD0CDAD0-DB3B-44AB-B5B0-F78B5A6B3E03}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="2" ID="{D48CB614-6ACD-4B17-AF6C-BC1FCD4AF291}" ShortID="1049672394">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0177859-38EC-46F6-8AA5-1E1E3E72B507}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{51C5BCF2-92D1-4008-BAEE-2D670199848D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Lose_2_1" ID="{E68F5E10-748A-4B3E-A131-A71D3E6DF445}" ShortID="363564670">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0177859-38EC-46F6-8AA5-1E1E3E72B507}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{51C5BCF2-92D1-4008-BAEE-2D670199848D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lose_2_1" ID="{211BE01F-35CA-4A36-A2E6-B635750843A0}" ShortID="677018497">
+											<Language>SFX</Language>
+											<AudioFile>Lose_2_1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lose_2_1" ID="{211BE01F-35CA-4A36-A2E6-B635750843A0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Lose_2_2" ID="{89AD8C7C-2726-4560-AA82-283513F68C21}" ShortID="496755248">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0177859-38EC-46F6-8AA5-1E1E3E72B507}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{51C5BCF2-92D1-4008-BAEE-2D670199848D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lose_2_2" ID="{75477DE8-2C7A-48C8-9033-28DECABBA234}" ShortID="574945511">
+											<Language>SFX</Language>
+											<AudioFile>Lose_2_2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lose_2_2" ID="{75477DE8-2C7A-48C8-9033-28DECABBA234}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Lose_2_3" ID="{1F8D6CF3-BC78-4FA9-BB63-CEC66B0CF6CF}" ShortID="888043663">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0177859-38EC-46F6-8AA5-1E1E3E72B507}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{51C5BCF2-92D1-4008-BAEE-2D670199848D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lose_2_3" ID="{AD8E6AD6-6427-4369-8D60-B2A3361E650B}" ShortID="679968663">
+											<Language>SFX</Language>
+											<AudioFile>Lose_2_3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lose_2_3" ID="{AD8E6AD6-6427-4369-8D60-B2A3361E650B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Lose_2_4" ID="{E0D1399D-D813-4D7A-8F4F-A198A8F9DB45}" ShortID="597097167">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0177859-38EC-46F6-8AA5-1E1E3E72B507}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{51C5BCF2-92D1-4008-BAEE-2D670199848D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lose_2_4" ID="{B598E508-6175-4ADE-8997-41ECA253F602}" ShortID="781816771">
+											<Language>SFX</Language>
+											<AudioFile>Lose_2_4.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lose_2_4" ID="{B598E508-6175-4ADE-8997-41ECA253F602}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="3" ID="{374C7A50-4628-4880-BE21-2AAEBA3719FC}" ShortID="459891327">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0177859-38EC-46F6-8AA5-1E1E3E72B507}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{51C5BCF2-92D1-4008-BAEE-2D670199848D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Lose_3_1" ID="{646E3189-8005-45D4-8D97-7A3F73216216}" ShortID="409669762">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0177859-38EC-46F6-8AA5-1E1E3E72B507}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{51C5BCF2-92D1-4008-BAEE-2D670199848D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lose_3_1" ID="{9F57F4E3-AEC0-4BBD-A156-CC4CCDECD777}" ShortID="724555173">
+											<Language>SFX</Language>
+											<AudioFile>Lose_3_1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lose_3_1" ID="{9F57F4E3-AEC0-4BBD-A156-CC4CCDECD777}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Lose_3_2" ID="{407C7B79-1AA2-495D-B22A-C7F560B08FB5}" ShortID="911303765">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B0177859-38EC-46F6-8AA5-1E1E3E72B507}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{51C5BCF2-92D1-4008-BAEE-2D670199848D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Lose_3_2" ID="{BE6CBB22-8125-43DD-9EBC-A2BAAE0511C3}" ShortID="730498299">
+											<Language>SFX</Language>
+											<AudioFile>Lose_3_2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Lose_3_2" ID="{BE6CBB22-8125-43DD-9EBC-A2BAAE0511C3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</BlendContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

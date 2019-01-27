@@ -3,7 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{299ECC9A-F7F4-4720-860C-3A78C625CAB2}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="D:\DUMkA\Games\Home Balance\Sounds\wwise\squeak"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="D:\DUMkA\Games\Home Balance\Sounds\wwise\lose"/>
 				<Property Name="Event Action List\{79B1EAAB-5C64-4ACC-8D3C-3823DA3A6109}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{7CE84B6E-4A91-4215-99ED-F8AA4AC9CE3F}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{AAF026AD-C0CD-4BFE-83BA-E6A06B4355A3}\x64_Expand States" Type="string" Value=""/>
