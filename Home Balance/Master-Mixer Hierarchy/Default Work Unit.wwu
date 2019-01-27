@@ -17,6 +17,16 @@
 						</Reference>
 					</ReferenceList>
 				</Bus>
+				<Bus Name="FX" ID="{1C423678-9C28-40C2-A130-17488533BD1C}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{A997132F-E11C-4CC2-AEFF-D79E11E2DC5B}" WorkUnitID="{AA058CBC-56A5-4134-BA56-F644E64BB415}"/>
+						</Reference>
+						<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
+							<ObjectRef Name="Room_Large" ID="{AD8EFAFC-7121-4D5F-BE4D-B13FBD6CEBAE}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+					</ReferenceList>
+				</Bus>
 			</ChildrenList>
 		</WorkUnit>
 	</Busses>
