@@ -11,6 +11,7 @@ public class ShuffleScript : MonoBehaviour
         public int height;
         public int width;
         public int pos;
+        public Color[] colors = new Color[5];
         public Transform transform;
     }
 
@@ -23,6 +24,12 @@ public class ShuffleScript : MonoBehaviour
     [SerializeField]
     public int length;
 
+    [SerializeField]
+    public Transform backgroundTransform;
+
+    [SerializeField]
+    public Color[] backgroundColors;
+
     bool[,] boolGrid;
 
 
@@ -30,6 +37,8 @@ public class ShuffleScript : MonoBehaviour
 
     private void Start()
     {
+        backgroundTransform.GetComponent<SpriteRenderer>().color = backgroundColors[random.Next(backgroundColors.Length)];
+
         boolGrid = new bool[2, length];
         for(int i = 0; i < boolGrid.GetLength(0); i++)
         {
@@ -42,6 +51,21 @@ public class ShuffleScript : MonoBehaviour
         for (int i = 0; i < grid.Length; i++)
         {
             AddFurniture(grid[i]);
+            RandomizeItem(grid[i]);
+        }
+    }
+
+    void RandomizeItem(Tile tile)
+    {
+        SpriteRenderer spriteRenderer = tile.transform.GetComponent<SpriteRenderer>();
+        spriteRenderer.flipX = BinaryRandom();
+        if (tile.colors.Length > 0)
+        {
+            int color = random.Next(tile.colors.Length + 1);
+            if( color != tile.colors.Length)
+            {
+                spriteRenderer.color = tile.colors[color];
+            }
         }
     }
 
@@ -88,6 +112,11 @@ public class ShuffleScript : MonoBehaviour
     private void Update()
     {
         
+    }
+
+    bool BinaryRandom()
+    {
+        return random.NextDouble() >= 0.5D;
     }
 
 }
